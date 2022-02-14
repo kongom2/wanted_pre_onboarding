@@ -13,4 +13,5 @@ const P = styled.p`
   font-size: 14px;
   font-weight: bold;
   line-height: 25px;
+  display: block;
 `;
