@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import Text from "./common/Text";
 
 const Toggle = () => {
   const [isToggled, setIsToggled] = useState(false);
+  console.log(isToggled);
   return (
     <DivBox>
       <Label>
@@ -13,9 +15,7 @@ const Toggle = () => {
         />
         <Slider className="slider" />
       </Label>
-      <ToggleStateText>
-        Toggle Switch {isToggled ? "On" : "Off"}
-      </ToggleStateText>
+      <Text>Toggle Switch {isToggled ? "On" : "Off"}</Text>
     </DivBox>
   );
 };
@@ -24,7 +24,7 @@ export default Toggle;
 
 const DivBox = styled.div`
   width: 700px;
-  margin: 100px 50px 50px 100px;
+  margin: 100px auto 50px auto;
   padding: 100px 0px;
   background-color: #333;
   border-radius: 30px;
@@ -72,9 +72,4 @@ const Slider = styled.span`
     background-color: #fff;
     transition: 0.4s;
   }
-`;
-
-const ToggleStateText = styled.p`
-  color: #fff;
-  font-weight: bold;
 `;
