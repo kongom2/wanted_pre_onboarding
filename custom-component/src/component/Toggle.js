@@ -39,9 +39,6 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  // opacity: 0;
-  // width: 0;
-  // height: 0;
   &:checked + .slider {
     background-color: #4900ce;
   }
